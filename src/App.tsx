@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { AppBar, Box, Container, createTheme, ThemeProvider, CssBaseline, Toolbar, Typography, Button } from '@mui/material'
-import Home from './components/Home';
+import { AppBar, createTheme, ThemeProvider, CssBaseline, Toolbar, Typography, Button } from '@mui/material'
+import Multistep from './components/Multistep';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import Signin from './components/Signin'
 
 const App = () => {
 
   const [appTheme, changeAppTheme] = useState<any>('light');
+  const [page, setPage] = useState<number>(0);
 
   const theme = createTheme({
     palette: {
@@ -27,8 +29,9 @@ const App = () => {
       <Toolbar variant="dense" style={{ display: 'flex', justifyContent: 'space-between' }}>
 
         <Typography variant="h6">
-          Multi-Step Form
+          Forms Using Formik And Yup
         </Typography>
+        <div>
 
         <Button
           onClick={() => appTheme === 'light' ? changeAppTheme('dark') : changeAppTheme('light')}
@@ -36,19 +39,20 @@ const App = () => {
           {appTheme === 'light' ? <LightModeIcon style={{ color: 'white' }} /> : <DarkModeIcon />}
         </Button>
 
+        <Button
+          onClick={() => page ? setPage(0) : setPage(1)}
+          style={{color: 'white'}}
+        >
+          {page ? 'Multistep Form' : 'Sign In Form'}
+        </Button>
+</div>
       </Toolbar>
 
     </AppBar>
 
     <CssBaseline />
-
-    <Container>
-
-      <Box marginTop={10}>
-        <Home />
-      </Box>
-
-    </Container>
+        {!page ? <Multistep /> :
+        <Signin />}
   </ThemeProvider>);
 }
 
