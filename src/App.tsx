@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { AppBar, Box, Container, createTheme, ThemeProvider, CssBaseline, Toolbar, Typography, Button } from '@mui/material'
+import Home from './components/Home';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+const App = () => {
+
+  const [appTheme, changeAppTheme] = useState<any>('light');
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#7b68ee'
+      },
+      secondary: {
+        main: '#FFFFFF'
+      },
+      mode: appTheme
+    }
+  });
+
+
+  return (<ThemeProvider theme={theme}>
+    <AppBar position="fixed">
+
+      <Toolbar variant="dense" style={{ display: 'flex', justifyContent: 'space-between' }}>
+
+        <Typography variant="h6">
+          Multi-Step Form
+        </Typography>
+
+        <Button
+          onClick={() => appTheme === 'light' ? changeAppTheme('dark') : changeAppTheme('light')}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {appTheme === 'light' ? <LightModeIcon style={{ color: 'white' }} /> : <DarkModeIcon />}
+        </Button>
+
+      </Toolbar>
+
+    </AppBar>
+
+    <CssBaseline />
+
+    <Container>
+
+      <Box marginTop={10}>
+        <Home />
+      </Box>
+
+    </Container>
+  </ThemeProvider>);
 }
 
 export default App;
