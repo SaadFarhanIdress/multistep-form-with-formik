@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# Multistep Form with Formik, Yup and TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Live](http://multistep-forms-with-formik.surge.sh/)
+<a href="https://multistep-forms-with-formik.surge.sh/"><img src="https://scontent.fkhi2-2.fna.fbcdn.net/v/t39.30808-6/260553255_1065512330864437_5896884717983442274_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=dm66_NdseRQAX-J2m1u&_nc_ht=scontent.fkhi2-2.fna&oh=5aa949ad6d20a3da55e0d167c3b67e99&oe=61A78226" /></a>
 
-## Available Scripts
+## Features
+- This form has 3 three steps.
+- In step 2, balance needs to 1 million if the I am a million checkbox was marked.
+- Supports Dark Mode.
 
-In the project directory, you can run:
+## Folder Structure
+| File name 　　　　　　　　　　　　　　| Description 　　|
+| :--  | :--         |
+| `└── src ` (directory) | Contains the source files for this project. |
+| `　　└── components` (directory) | _Contains two components._ |
+| `　　　　├── FormikStepper` (directory) | Contains the FormikStepper component. |
+| `　　　　└── Home` | Contains the form. |
+| `　　├── App.tsx` | Entry component for the application. |
+| `　　├── index.css` | Contains Global CSS |
+| `　　└── index.tsx` | The main index file. |
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
