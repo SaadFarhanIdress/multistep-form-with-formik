@@ -3,19 +3,19 @@
 ## [Live](http://forms-with-formik.surge.sh/)
 <a href="https://forms-with-formik.surge.sh/"><img src="./images/preview.gif" /></a>
 
-## Features
+# Features
 - Supports Dark Mode.
 
-### Multistep Form
+## Multistep Form
 - This form has 3 three steps.
 - In step 2, balance needs to the 1 million if the `I am a millionaire` checkbox was marked.
 
-### Signup Form
+## Signup Form
 - Includes strict validations
-## Folder Structure
+# Folder Structure
 | File name 　　　　　　　　　　　　　　| Description 　　|
 | :--  | :--         |
-| `└── src ` (directory) | Contains the source files for this project. |
+| `└── src` (directory) | Contains the source files for this project. |
 | `　　└── components` (directory) | Contains Three components.|
 | `　　　　├── FormikStepper` (directory) | Contains the FormikStepper component for multistep form. |
 | `　　　　├── Multistep` | Contains the multistep form creation. |
