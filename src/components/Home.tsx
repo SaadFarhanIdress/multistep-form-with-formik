@@ -1,9 +1,19 @@
 import React from 'react';
 
+import { Card, CardContent, Box } from '@mui/material';
+
+import { Field } from 'formik';
+import { CheckboxWithLabel, TextField } from 'formik-material-ui'
+import { mixed, number, object } from 'yup';
+import FormikStepper, { FormikStep } from './FormikStepper';
+
+const sleep = (time: number) => new Promise((acc) => setTimeout(acc, time));
+
 const Home = () => {
     return (
         <Card>
             <CardContent>
+                <FormikStepper
                     initialValues={{
                         firstName: '',
                         lastName: '',
