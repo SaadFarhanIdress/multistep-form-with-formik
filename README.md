@@ -12,7 +12,7 @@
 | File name 　　　　　　　　　　　　　　| Description 　　|
 | :--  | :--         |
 | `└── src ` (directory) | Contains the source files for this project. |
-| `　　└── components` (directory) | _Contains two components._ |
+| `　　└── components` (directory) | Contains two components.|
 | `　　　　├── FormikStepper` (directory) | Contains the FormikStepper component. |
 | `　　　　└── Home` | Contains the form. |
 | `　　├── App.tsx` | Entry component for the application. |
