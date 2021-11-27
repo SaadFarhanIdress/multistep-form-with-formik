@@ -17,7 +17,7 @@
 | :--  | :--         |
 | `└── src` (directory) | Contains the source files for this project. |
 | `　　└── components` (directory) | Contains Three components.|
-| `　　　　├── FormikStepper` (directory) | Contains the FormikStepper component for multistep form. |
+| `　　　　├── FormikStepper` | Contains the FormikStepper component for multistep form. |
 | `　　　　├── Multistep` | Contains the multistep form creation. |
 | `　　　　└── Signin` | Contains the signin form creation. |
 | `　　├── App.tsx` | Entry component for the application. |
