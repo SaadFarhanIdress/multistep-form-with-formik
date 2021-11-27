@@ -26,12 +26,12 @@ const App = () => {
   return (<ThemeProvider theme={theme}>
     <AppBar position="fixed">
 
-      <Toolbar variant="dense" style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <Toolbar variant="dense" className="AppBar">
 
-        <Typography variant="h6">
+        <Typography component="div" sx={{ flexGrow: 1 }} className="AppHead">
           Forms Using Formik And Yup
         </Typography>
-        <div>
+        <div className="AppBar">
 
         <Button
           onClick={() => appTheme === 'light' ? changeAppTheme('dark') : changeAppTheme('light')}
@@ -43,7 +43,7 @@ const App = () => {
           onClick={() => page ? setPage(0) : setPage(1)}
           style={{color: 'white'}}
         >
-          {page ? 'Multistep Form' : 'Sign In Form'}
+          {page ? 'Multistep' : 'Sign In'}
         </Button>
 </div>
       </Toolbar>
@@ -51,6 +51,7 @@ const App = () => {
     </AppBar>
 
     <CssBaseline />
+  
         {!page ? <Multistep /> :
         <Signin />}
   </ThemeProvider>);

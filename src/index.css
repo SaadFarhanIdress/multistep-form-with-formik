@@ -1,3 +1,14 @@
 * {
     font-family: 'Montserrat', sans-serif !important;
 }
+
+@media screen and (orientation: portrait) {
+    .AppHead {
+        font-size: smaller !important;
+    }
+}
+
+.AppBar {
+    display: flex !important;
+    justify-content: space-between !important;
+}
