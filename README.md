@@ -5,7 +5,7 @@
 
 ## Features
 - This form has 3 three steps.
-- In step 2, balance needs to 1 million if the I am a million checkbox was marked.
+- In step 2, balance needs to the 1 million if the `I am a millionaire` checkbox was marked.
 - Supports Dark Mode.
 
 ## Folder Structure
